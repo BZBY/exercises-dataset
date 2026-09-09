@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>25天减脂执行表 · 205斤 / 185cm</title>
+<style>
+:root{
+  --paper:#EDF0EA; --card:#F7F9F4; --ink:#1B2A4A; --ink2:#5C6B85; --ink3:#8894A8;
+  --rule:#C9D2C2; --rule2:#DDE3D7; --seal:#C1121F; --go:#2D6A4F; --amber:#9C6B10;
+  --f-disp:"Songti SC","SimSun","Source Han Serif SC","Noto Serif SC",serif;
+  --f-body:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --f-num:"Cascadia Mono",Consolas,"SF Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; color:var(--ink); font-family:var(--f-body); font-size:15px; line-height:1.75;
+  background-color:var(--paper);
+  background-image:linear-gradient(rgba(120,140,110,.10) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(120,140,110,.10) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px 100px}
+h2{font-family:var(--f-disp);font-size:27px;font-weight:700;letter-spacing:.02em;margin:0;padding-left:14px;border-left:4px solid var(--seal);line-height:1.3}
+h3{font-size:16px;font-weight:700;margin:30px 0 12px;color:var(--ink)}
+h4{font-size:14px;font-weight:700;margin:20px 0 8px;color:var(--ink2)}
+p{margin:10px 0}
+section{padding:44px 0;border-top:1px solid var(--rule)}
+.sub{color:var(--ink2);font-size:14px;margin:10px 0 0;max-width:70ch}
+.n{font-family:var(--f-num);font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+a{color:var(--seal)}
+
+header{border-bottom:2px solid var(--ink);padding:26px 0 16px}
+.masthead{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;justify-content:space-between}
+.title{font-family:var(--f-disp);font-size:40px;font-weight:700;line-height:1.05;letter-spacing:.01em}
+.title small{display:block;font-family:var(--f-body);font-size:13px;font-weight:400;color:var(--ink2);letter-spacing:.06em;margin-top:8px}
+.vitals{display:flex;border:1px solid var(--rule);background:var(--card)}
+.vitals div{padding:8px 15px;border-right:1px solid var(--rule2);text-align:center}
+.vitals div:last-child{border-right:0}
+.vitals .k{font-size:11px;color:var(--ink3);letter-spacing:.08em}
+.vitals .v{font-family:var(--f-num);font-size:19px;font-weight:700;line-height:1.2}
+
+.hero{padding:40px 0 44px}
+.bars{margin:26px 0 0}
+.bar{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;margin-bottom:16px}
+.bar .lbl{text-align:right;font-size:13px;color:var(--ink2);line-height:1.35}
+.bar .lbl em{display:block;font-family:var(--f-disp);font-style:normal;font-size:25px;font-weight:700;color:var(--ink);line-height:1.1}
+.track{position:relative;height:34px;background:repeating-linear-gradient(90deg,transparent,transparent 12px,rgba(27,42,74,.05) 12px,rgba(27,42,74,.05) 13px)}
+.fill{height:100%;display:flex;align-items:center;padding-left:12px;color:#fff;font-size:12.5px;letter-spacing:.03em}
+.f-want{background:var(--seal);width:100%}
+.f-plan{background:var(--go);width:60%}
+.f-lazy{background:var(--ink3);width:23%}
+.mathbox{margin-top:32px;border:1px solid var(--rule);background:var(--card);padding:20px 22px;position:relative}
+.mathrow{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed var(--rule2);font-size:14px}
+.mathrow:last-of-type{border-bottom:0}
+.mathrow .r{font-family:var(--f-num);font-weight:700;white-space:nowrap}
+.verdict{margin-top:16px;padding-top:15px;border-top:2px solid var(--ink);font-size:14.5px;line-height:1.8}
+.seal{position:absolute;top:-16px;right:18px;transform:rotate(-7deg);border:3px double var(--seal);color:var(--seal);
+  font-family:var(--f-disp);font-size:19px;font-weight:700;letter-spacing:.14em;padding:7px 13px;background:var(--paper)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.box{border:1px solid var(--rule);background:var(--card);padding:18px 20px}
+.box.warn{border-left:4px solid var(--amber)}
+.box.stop{border-left:4px solid var(--seal)}
+.box.ok{border-left:4px solid var(--go)}
+.box h4{margin-top:0}
+ul{margin:8px 0;padding-left:20px}
+li{margin:5px 0}
+.tick li,.cross li{list-style:none;position:relative;padding-left:20px}
+.tick li:before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--go)}
+.cross li:before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--seal)}
+
+.daily{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--ink);background:var(--card)}
+.daily div{padding:18px 12px;border-right:1px solid var(--rule2)}
+.daily div:last-child{border-right:0}
+.daily .v{font-family:var(--f-num);font-size:29px;font-weight:700;line-height:1}
+.daily .u{font-size:12px;color:var(--ink3);margin-left:2px;font-family:var(--f-body)}
+.daily .k{font-size:12.5px;color:var(--ink2);margin-top:7px}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+th{text-align:left;font-weight:700;font-size:12px;color:var(--ink2);padding:8px 10px;border-bottom:1.5px solid var(--ink);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--rule2);vertical-align:top}
+tbody tr:hover{background:rgba(45,106,79,.05)}
+td.num{font-family:var(--f-num);white-space:nowrap}
+
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:16px}
+.day{border:1px solid var(--rule);background:var(--card);padding:9px 8px;cursor:pointer;position:relative;min-height:74px;
+  display:flex;flex-direction:column;justify-content:space-between;text-align:left;font:inherit;color:inherit}
+.day:hover{border-color:var(--ink)}
+.day:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.day .d{font-family:var(--f-num);font-size:16px;font-weight:700;line-height:1}
+.day .t{font-size:11.5px;color:var(--ink2);line-height:1.3}
+.day[data-k="A"]{border-top:3px solid var(--go)}
+.day[data-k="B"]{border-top:3px solid #2C5282}
+.day[data-k="C"]{border-top:3px solid var(--amber)}
+.day[data-k="L"]{border-top:3px solid #7B4B94}
+.day[data-k="R"]{border-top:3px solid var(--ink3)}
+.day.done{background:var(--go);border-color:var(--go)}
+.day.done .d,.day.done .t{color:#fff}
+.day.done:after{content:"\2713";position:absolute;top:6px;right:8px;color:#fff;font-size:14px;font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:12.5px;color:var(--ink2)}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:16px;height:4px;display:inline-block}
+.progress{margin-top:18px;border:1px solid var(--rule);background:var(--card);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.progress .n{font-size:22px;font-weight:700}
+
+.exlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px;margin-top:14px}
+.ex{border:1px solid var(--rule);background:var(--card);overflow:hidden;text-align:left;font:inherit;color:inherit;cursor:pointer;padding:0;display:flex;flex-direction:column}
+.ex:hover{border-color:var(--ink)}
+.ex:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.ex img{width:100%;aspect-ratio:1;object-fit:cover;background:#fff;display:block;border-bottom:1px solid var(--rule2)}
+.ex .meta{padding:11px 13px}
+.ex .zh{font-weight:700;font-size:14px;line-height:1.35}
+.ex .en{font-size:11px;color:var(--ink3);font-family:var(--f-num);margin-top:3px;word-break:break-word}
+.ex .rx{font-family:var(--f-num);font-size:13px;color:var(--go);font-weight:700;margin-top:7px}
+.ex .back{font-size:12px;color:#C1121F;margin-top:8px;padding-top:8px;border-top:1px dashed #DDE3D7;line-height:1.55}
+.ex .back.good{color:#2D6A4F}
+.ex .steps{display:none;padding:0 13px 13px;font-size:12.5px;color:var(--ink2);line-height:1.65}
+.ex.open .steps{display:block}
+.ex .steps ol{padding-left:17px;margin:6px 0 0}
+.ex .hint{font-size:11.5px;color:var(--ink3);margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule2)}
+
+.tl{border-left:2px solid var(--rule);margin:16px 0 0;padding-left:0;list-style:none}
+.tl li{position:relative;padding:0 0 16px 20px;list-style:none;margin:0}
+.tl li:before{content:"";position:absolute;left:-5px;top:9px;width:8px;height:8px;background:var(--ink);border-radius:50%}
+.tl .t{font-family:var(--f-num);font-weight:700;font-size:14px}
+.tl .c{font-size:13.5px;color:var(--ink2)}
+
+.logform{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin:14px 0}
+label{font-size:12.5px;color:var(--ink2);display:block;margin-bottom:4px}
+input[type=number]{font-family:var(--f-num);font-size:16px;padding:8px 10px;border:1px solid var(--rule);background:#fff;color:var(--ink);width:110px}
+input:focus-visible{outline:2px solid var(--seal);outline-offset:1px}
+button.act{font:inherit;font-size:14px;font-weight:700;padding:9px 18px;background:var(--ink);color:var(--paper);border:0;cursor:pointer}
+button.act:hover{background:var(--seal)}
+button.act:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+button.ghost{background:none;border:1px solid var(--rule);color:var(--ink2);font:inherit;font-size:12.5px;padding:7px 13px;cursor:pointer}
+button.ghost:hover{border-color:var(--seal);color:var(--seal)}
+.chart{width:100%;border:1px solid var(--rule);background:var(--card);margin-top:16px;display:block}
+.footnote{font-size:12.5px;color:var(--ink3);margin-top:12px;max-width:74ch}
+footer{border-top:2px solid var(--ink);padding:22px 0 0;font-size:12.5px;color:var(--ink3);max-width:74ch}
+
+@media(max-width:820px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  .daily{grid-template-columns:repeat(2,1fr)}
+  .daily div{border-bottom:1px solid var(--rule2)}
+  .cal{grid-template-columns:repeat(5,1fr)}
+  .title{font-size:30px}
+  h2{font-size:22px}
+  .seal{font-size:15px;top:-13px}
+  .bar{grid-template-columns:74px 1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="masthead">
+    <div class="title">25天减脂执行表<small>男 · 25岁 · 185cm · 起始 205斤 · IT久坐 / 熬夜 / 炸鸡可乐</small></div>
+    <div class="vitals">
+      <div><div class="k">BMI</div><div class="v">29.9</div></div>
+      <div><div class="k">基础代谢</div><div class="v">2061</div></div>
+      <div><div class="k">全天消耗</div><div class="v">3092</div></div>
+      <div><div class="k">每日摄入</div><div class="v">1800</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <h2>先把账算清楚</h2>
+  <p class="sub">你要 25 天掉 30 斤。这个数字不是"难"，是身体做不到。下面是三个数各自对应什么。</p>
+
+  <div class="bars">
+    <div class="bar"><div class="lbl"><em>30斤</em>你要的</div>
+      <div class="track"><div class="fill f-want">需要每天净亏 4,620 大卡 — 你全天总消耗才 3,092</div></div></div>
+    <div class="bar"><div class="lbl"><em>15–20斤</em>本方案</div>
+      <div class="track"><div class="fill f-plan">严格执行 25 天的上限</div></div></div>
+    <div class="bar"><div class="lbl"><em>5–8斤</em>随便练</div>
+      <div class="track"><div class="fill f-lazy">只戒可乐</div></div></div>
+  </div>
+
+  <div class="mathbox">
+    <div class="seal">生理不可能</div>
+    <div class="mathrow"><span>30 斤纯脂肪储存的能量</span><span class="r">115,500 大卡</span></div>
+    <div class="mathrow"><span>摊到 25 天，每天要净亏</span><span class="r">4,620 大卡</span></div>
+    <div class="mathrow"><span>你一天全部消耗（含训练和 12,000 步）</span><span class="r">3,092 大卡</span></div>
+    <div class="mathrow"><span>就算 25 天完全不吃，理论最多掉</span><span class="r">约 20 斤</span></div>
+    <div class="verdict">
+      也就是说，<b>断食 25 天都到不了 30 斤</b>，而断食会先掉肌肉、诱发痛风和胆结石，还会让代谢塌下来，
+      结束后反弹得比原来更重。<br>
+      本方案给的 <b>15–20 斤</b>，是在保住肌肉、不进医院的前提下能拿到的最大值。
+      按 185cm 的身高，减到 187 斤时 BMI 从 29.9 降到 27.3，肚子会有肉眼可见的变化。
+    </div>
+  </div>
+</div>
+
+<section>
+  <h2>这 15–20 斤是什么组成的</h2>
+  <p class="sub">这一段决定了你会不会在第 10 天放弃。第一周掉得飞快，第二周几乎不动 —— 这是正常的，因为前后掉的根本不是同一种东西。</p>
+
+  <svg class="chart" viewBox="0 0 900 330" role="img" aria-label="25天体重预测曲线，从205斤降至约188斤">
+    <defs><pattern id="gp" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#C9D2C2" stroke-width=".5"/></pattern></defs>
+    <rect x="58" y="14" width="812" height="252" fill="url(#gp)"/>
+    <g font-family="Cascadia Mono,Consolas,monospace" font-size="11" fill="#8894A8">
+      <text x="50" y="20" text-anchor="end">206</text><text x="50" y="76" text-anchor="end">201</text>
+      <text x="50" y="132" text-anchor="end">197</text><text x="50" y="188" text-anchor="end">193</text>
+      <text x="50" y="244" text-anchor="end">189</text><text x="50" y="270" text-anchor="end">187</text>
+      <text x="58" y="286">第0天</text><text x="253" y="286">第6天</text><text x="448" y="286">第12天</text>
+      <text x="643" y="286">第18天</text><text x="838" y="286" text-anchor="end">第25天</text>
+    </g>
+    <line x1="58" y1="266" x2="870" y2="266" stroke="#1B2A4A" stroke-width="1.5"/>
+    <line x1="58" y1="14" x2="58" y2="266" stroke="#1B2A4A" stroke-width="1.5"/>
+    <path id="band" fill="rgba(45,106,79,.14)" stroke="none"/>
+    <path id="curve" fill="none" stroke="#2D6A4F" stroke-width="2.5"/>
+    <path id="actual" fill="none" stroke="#C1121F" stroke-width="2.5"/>
+    <g id="pts"></g>
+    <g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12">
+      <rect x="620" y="30" width="11" height="11" fill="#2D6A4F"/><text x="638" y="40" fill="#5C6B85">预测（含浮动区间）</text>
+      <rect x="620" y="50" width="11" height="11" fill="#C1121F"/><text x="638" y="60" fill="#5C6B85">你的实际记录</text>
+    </g>
+    <text x="290" y="316" font-family="PingFang SC,sans-serif" font-size="12" fill="#8894A8">第 1 周主要掉水和糖原 · 第 2 周起才是真正的脂肪</text>
+  </svg>
+
+  <div class="grid3" style="margin-top:22px">
+    <div class="box ok"><h4>约 8.5 斤 · 水 + 糖原 + 肠内容物</h4>
+      <p style="font-size:13.5px;margin:0">你现在是高碳水高钠饮食。一改过来，肌肉里存的糖原会排空，
+      每 1 克糖原带着 3 克水一起走；钠降下来细胞外液也少。<b>集中在第 1 周掉完</b>，之后不再重复给你。
+      这部分不是脂肪，也随时会因为一顿火锅涨回来 —— 别被秤吓到。</p></div>
+    <div class="box ok"><h4>约 8.4 斤 · 真脂肪</h4>
+      <p style="font-size:13.5px;margin:0">每天 1,292 大卡缺口 × 25 天 = 32,297 大卡 ≈ 4.2 公斤脂肪。
+      这部分<b>匀速、缓慢、不可加速</b>，也是唯一不会反弹回来的部分。
+      第 2 周开始秤看着不动，掉的其实全是它。</p></div>
+    <div class="box warn"><h4>0 斤 · 肌肉（目标）</h4>
+      <p style="font-size:13.5px;margin:0">每天 175 克蛋白 + 每周 3 次力量训练，就是为了让掉的这 17 斤里<b>一斤肌肉都不要有</b>。
+      省掉任何一项，掉的重量里会有 25–30% 是肌肉，代谢跟着往下走，结束后必反弹。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>每天只需要记住五个数</h2>
+  <p class="sub">其他所有细节都是为了让这五个数落地。任何一天，只要这五个数达标，这天就算过了。</p>
+  <div class="daily" style="margin-top:20px">
+    <div><div class="v">1800<span class="u">大卡</span></div><div class="k">吃进去的总热量</div></div>
+    <div><div class="v">175<span class="u">克</span></div><div class="k">蛋白质，保肌肉的底线</div></div>
+    <div><div class="v">3.5<span class="u">升</span></div><div class="k">白水，护肾和尿酸</div></div>
+    <div><div class="v">12000<span class="u">步</span></div><div class="k">约 9 公里，你腿长走得快</div></div>
+    <div><div class="v">7.5<span class="u">小时</span></div><div class="k">睡眠，最容易被你毁掉的一项</div></div>
+  </div>
+  <p class="footnote">三大营养素怎么凑：蛋白 175 克（700 大卡）+ 碳水 150 克（600 大卡）+ 脂肪 55 克（495 大卡）。
+  脂肪不能再低了 —— 低于 40 克/天在快速减重期会显著抬高胆结石风险，这不是可以省的地方。</p>
+</section>
+
+<section>
+  <h2>你说的四个部位，会按这个顺序掉</h2>
+  <p class="sub">脂肪从哪里掉是基因决定的，你无法指定。但男性有稳定的规律，而且你列的这四个部位性质完全不同 —— 尤其是胸部，需要先分清是哪一种。</p>
+
+  <table>
+    <thead><tr><th style="width:14%">部位</th><th style="width:16%">性质</th><th style="width:13%">掉的顺序</th><th>说明</th></tr></thead>
+    <tbody>
+    <tr><td><b>肚子</b></td><td>内脏脂肪为主</td><td class="num" style="color:#2D6A4F"><b>最先</b></td>
+      <td>好消息：内脏脂肪对热量缺口反应最快，通常 2 周内腰围就有变化。坏消息：它也是四个里代谢风险最高的，是脂肪肝、胰岛素抵抗和高血压的直接来源。<b>量腰围比量体重诚实</b>。</td></tr>
+    <tr><td><b>胸部</b></td><td>要先分清两种</td><td class="num">看类型</td>
+      <td><b>纯脂肪堆积</b>：捏起来软、均匀、无痛 → 减脂能解决，会跟着全身一起掉。<br>
+      <b>真性男性乳腺发育</b>：乳头正下方能摸到<b>硬的盘状结节</b>，按压有点胀痛 → 这是腺体不是脂肪，<b>减脂减不掉，练胸也没用</b>，需要看内分泌科。<br>
+      长期肥胖会让脂肪组织把睾酮转成雌二醇，加上熬夜压睾酮，你属于高发人群 —— 建议体检时加一项性激素六项。</td></tr>
+    <tr><td><b>大腿</b></td><td>皮下脂肪</td><td class="num" style="color:#9C6B10">较慢</td>
+      <td>皮下脂肪血流少、脂解酶密度低，掉得比内脏脂肪慢得多。25 天后腿围可能只小 2–3 厘米，<b>这不代表方案没用</b>。</td></tr>
+    <tr><td><b>屁股</b></td><td>皮下脂肪</td><td class="num" style="color:#C1121F"><b>最后</b></td>
+      <td>男性身上最顽固的一块，通常要等体脂降到 15% 以下才明显。25 天内基本别指望，这是第 2、第 3 个月的事。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid2" style="margin-top:24px">
+    <div class="box stop"><h4>局部减脂不存在，别浪费时间</h4>
+      <ul class="cross" style="margin-bottom:0">
+        <li>做 100 个卷腹<b>不会</b>让肚子先瘦 —— 它只练腹肌，脂肪照旧盖在上面</li>
+        <li>做俯卧撑<b>不会</b>专门减掉胸部脂肪</li>
+        <li>"瘦腿操""提臀操"不改变脂肪从哪掉，只是低效有氧</li>
+        <li>任何号称燃烧特定部位的甩脂机、瘦身霜、暴汗服，掉的都是水</li>
+      </ul></div>
+    <div class="box ok"><h4>但训练改变的是轮廓</h4>
+      <ul class="tick" style="margin-bottom:0">
+        <li>练胸大肌（上斜俯卧撑）→ 胸部从"下垂的软肉"变成有形状的板块，视觉改善远大于减脂本身</li>
+        <li>练臀（臀桥、罗马尼亚硬拉）→ 臀部上提，同样围度看起来紧实得多</li>
+        <li>练背（划船、下拉）→ 肩变宽、腰显窄，这是<b>最快改变体型观感</b>的一招</li>
+        <li>深蹲硬拉在热量缺口下<b>不会让腿变粗</b>，你现在的腿围主要是脂肪撑的</li>
+      </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>25 天日程</h2>
+  <p class="sub">点一下打勾，进度存在这台电脑的浏览器里，关掉页面也在。力量训练 A / B 交替，每周 3 次力量 + 3 次有氧 + 1 天休息。</p>
+  <div class="cal" id="cal"></div>
+  <div class="legend">
+    <span><i style="background:#2D6A4F"></i>A 日 · 下肢与核心</span>
+    <span><i style="background:#2C5282"></i>B 日 · 上肢与背</span>
+    <span><i style="background:#9C6B10"></i>有氧 45 分钟</span>
+    <span><i style="background:#7B4B94"></i>长有氧 70 分钟</span>
+    <span><i style="background:#8894A8"></i>休息 · 只走 8000 步</span>
+  </div>
+  <div class="progress">
+    <div>已完成 <span class="n" id="doneN">0</span> / 25 天　　估算已减 <span class="n" id="estKg">0.0</span> 斤</div>
+    <button class="ghost" id="resetBtn">清空进度</button>
+  </div>
+</section>
+
+<section>
+  <h2>腰和背酸 · 先处理这个</h2>
+  <p class="sub">你还没开始练就酸，所以不是训练伤。两侧、不放射、从腰连到上背 —— 红旗症状可以排除，这是典型的姿势性肌筋膜疼痛。但<b>“腰部”和“背上”成因相反</b>，
+  得分开治，这也正是这套计划本来就在解决的问题，只需要先改几个动作。</p>
+
+  <div class="box stop">
+    <h4>有下面任何一条，停止训练直接就医</h4>
+    <div class="grid2" style="gap:0 26px;margin-top:6px">
+      <ul class="cross" style="margin:0">
+        <li>疼或麻<b>放射到膝盖以下</b>，小腿脚掌发麻刺痛 —— 神经根受压</li>
+        <li>会阴、肛周发麻，或<b>大小便控制不住、尿不出来</b> —— 马尾综合征，<b>这条是急诊</b></li>
+        <li>脚背抬不起来、走路拖地、单腿明显没劲</li>
+      </ul>
+      <ul class="cross" style="margin:0">
+        <li>夜里痛醒，躺着休息也不缓解</li>
+        <li>伴发热，或最近莫名其妙掉体重</li>
+        <li>一侧腰绞痛放射到腹股沟，或小便带血 —— 可能是<b>肾结石</b></li>
+      </ul>
+    </div>
+    <p style="font-size:13px;color:#5C6B85;margin:12px 0 0;padding-top:10px;border-top:1px dashed #DDE3D7">
+    最后一条对你不是随口一提：长期大量可乐（果糖直接升血尿酸）+ 喝水少，是尿酸结石的典型组合。
+    这也是体检项里让你查血尿酸的原因之一。</p>
+  </div>
+
+  <h3>两处酸，方向正好相反</h3>
+  <p style="font-size:14px">这是最容易搞错的地方 —— 用治腰的办法治上背，会越治越糟。</p>
+  <table>
+    <thead><tr><th style="width:18%"></th><th style="width:41%">下腰（腰部）</th><th>上背（两块肩胛骨之间）</th></tr></thead>
+    <tbody>
+    <tr><td><b>紧的是</b></td><td>髂腰肌 —— 髋<b>前</b>侧</td><td>胸大肌、胸小肌 —— 胸<b>前</b>侧</td></tr>
+    <tr><td><b>弱的是</b></td><td>臀肌</td><td>菱形肌、中下斜方肌</td></tr>
+    <tr><td><b>该拉伸</b></td><td class="num" style="color:#2D6A4F">髋前侧</td><td class="num" style="color:#2D6A4F">胸前侧</td></tr>
+    <tr><td><b>该强化</b></td><td class="num" style="color:#2D6A4F">臀桥、死虫</td><td class="num" style="color:#2D6A4F">划船、反向飞鸟</td></tr>
+    <tr><td><b>共同点</b></td><td colspan="2">酸的那块肌肉<b>都不是问题所在</b>，它只是在替别人干活。真正要动的是它的前面和它的对手。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box stop" style="margin-top:20px">
+    <h4>最反直觉、也最重要的一点</h4>
+    <p style="font-size:14px;margin:4px 0 0">肩胛骨之间那块酸的地方，你的本能是去按它、捶它、拉伸它、贴膏药。
+    <b>但那两块肌肉（菱形肌、中下斜方肌）不是缩短了，是被长期拉长而且变弱了。</b></p>
+    <p style="font-size:14px;margin:11px 0 0">你含胸驼背对着屏幕，肩胛骨被胸肌拽向前外侧，这两块肌肉整天在被拉长的状态下低强度收缩 —— 所以酸。
+    去拉伸它只能换来二十分钟的舒服，然后原样返回，因为你把已经过长的肌肉又拉长了一点。
+    <b>主线是把它练强，而不是把它拉松。</b></p>
+    <p style="font-size:13px;color:#5C6B85;margin:9px 0 0">补一句准确的：现有系统综述的结论是<b>"拉紧的 + 练弱的 + 改动作控制"三者结合</b>效果最好，
+    单用任何一样都不够。所以拉伸不是没用 —— 只是<b>要拉的是胸前那块紧的，不是肩胛之间那块酸的</b>，
+    再加上工位调整和频繁变换姿势这条动作控制的腿。</p>
+    <p style="font-size:14px;margin:11px 0 0;padding-top:11px;border-top:1px dashed #DDE3D7">
+    真正该拉伸的，是把你肩膀往前拽的<b>胸大肌和胸小肌</b>。这就是为什么<b>俯身划船和反向飞鸟在你身上不是"练背增肌"，而是治疗动作</b>，
+    一次都不能跳 —— 尽管反向飞鸟的重量轻到你会觉得没在练。</p>
+  </div>
+
+  <div class="box warn" style="margin-top:18px">
+    <h4>还有一层：胸椎不动，腰椎和颈椎替它受罪</h4>
+    <p style="font-size:14px;margin:4px 0 0">胸椎本来该负责身体大部分的后仰和旋转。长期驼背之后它<b>失去了后伸能力</b>，
+    这些活动量只能由上下两头去补 —— 上面是颈椎，下面是腰椎。<b>这就是为什么你腰和背会同时酸</b>，它们是同一个问题的两端。</p>
+    <p style="font-size:14px;margin:11px 0 0">解法是恢复胸椎活动度，最直接的是<b>泡沫轴胸椎伸展</b>（下面训练区第一个新加的动作）。
+    泡沫轴几十块钱，为这一个动作也值得买。注意<b>只滚肩胛骨那一段，绝对别滚到腰上</b> ——
+    腰椎的活动度本来就过剩，滚它只会让它更不稳。</p>
+  </div>
+
+  <h3>“屁股上面、肚子正后方”——这个位置对应什么</h3>
+  <p style="font-size:14px">你把位置说得很具体，这帮助很大。这一片是腰骶段，重叠着四个结构，按可能性排序：</p>
+  <table>
+    <thead><tr><th style="width:19%">结构</th><th style="width:13%">可能性</th><th>为什么，以及怎么自己分辨</th></tr></thead>
+    <tbody>
+    <tr><td><b>腰方肌（QL）</b></td><td class="num" style="color:#C1121F"><b>最可能</b></td>
+      <td>它从<b>髂嵴</b>（骨盆上缘）连到第 12 肋和 L1–L4 横突 —— 正好铺满你说的这两处。它的下部触发点就位于<b>竖脊肌与髂嵴交汇的深处</b>，也就是“屁股上面”那个点。久坐会让它慢性缩短；而腹肌被肚子撑长变弱、髂腰肌变紧时，QL 会被迫接管本不该它干的活。<br>
+      <b>自查：</b>站直，上身缓慢向一侧倒 —— 如果拉扯或酸胀出现在<b>对侧</b>腰的深处，基本就是它。久坐后刚站起来那几秒最难受，也是它的典型表现。</td></tr>
+    <tr><td><b>竖脊肌腰段</b></td><td class="num" style="color:#9C6B10">很可能</td>
+      <td>脊柱两侧那两条纵行的肌肉，负责全天对抗你上半身（和肚子）往前倒的力矩。<br>
+      <b>自查：</b>两侧对称、位置更靠近中线、前弯和后仰都发紧，用手指能摸到两条明显发硬的条索。</td></tr>
+    <tr><td><b>胸腰筋膜</b></td><td class="num" style="color:#9C6B10">常合并</td>
+      <td>覆盖整个腰骶区的一大片菱形筋膜，是上面两块肌肉共用的“外衣”。它不单独出问题，但会把局部的酸摊成一整片说不清边界的钝痛 —— 如果你觉得“说不准到底哪一个点酸，就是一片”，多半有它。</td></tr>
+    <tr><td><b>骶髂关节</b></td><td class="num" style="color:#5C6B85">要排除</td>
+      <td>位置更低更靠外，在两个“腰窝”（髂后上棘）那里。<br>
+      <b>自查：</b>如果是它，翻身、上下车、单腿站着穿裤子时会明显加重，而且<b>常常是一侧重一侧轻</b>。你说的是两侧，所以可能性不大 —— 但如果哪天变成明显偏一边，要往这上面想。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box warn" style="margin-top:20px">
+    <h4>为什么偏偏是你：肚子是个杠杆，不只是重量</h4>
+    <p style="font-size:14px;margin:4px 0 0">这一点值得单独讲，因为它把你的“肚子大”和“腰酸”直接连起来了 ——
+    而且解释了为什么同样体重的人，肚子大的那个腰更容易出问题。</p>
+    <p style="font-size:14px;margin:11px 0 0">你的腹部脂肪长在<b>脊柱前方</b>，离脊柱有一段距离。这段距离就是力臂。
+    它整天产生一个把你上半身往前拽的力矩，而<b>抵消这个力矩的只有你背后那几块肌肉</b> ——
+    竖脊肌和腰方肌因此全天处在低强度等长收缩里，从不下班。这就是那种“说不清哪疼，就是一直酸”的来源。</p>
+    <p style="font-size:14px;margin:11px 0 0">还有两个叠加效应：肚子把骨盆往前拽 → 腰椎前凸加大 → 后方关节突持续挤压；
+    腹肌被撑长后变弱 → 核心支撑不足 → 腰方肌和竖脊肌进一步接管。<b>这是一个自我强化的循环。</b></p>
+    <p style="font-size:13px;color:#5C6B85;margin:12px 0 0;padding-top:11px;border-top:1px dashed #DDE3D7">
+    有意思的是，研究发现<b>脂肪长在哪里</b>对脊柱负荷的影响独立于体重本身 —— 腹型（苹果型）比外周型（梨型）对腰更不利。
+    你正好是肚子最大的那一类。好消息是内脏脂肪掉得最快，所以这部分负荷会是最先减轻的。</p>
+  </div>
+
+  <div class="box stop" style="margin-top:18px">
+    <h4>更正我前面说过的一句话</h4>
+    <p style="font-size:14px;margin:4px 0 0">我之前写过“减掉 17 斤对腰是实打实的卸载”。生物力学上讲得通，
+    但我去查了临床证据，<b>这句话说得太满了</b>：</p>
+    <p style="font-size:14px;margin:11px 0 0">2022 年一篇关于减重项目治疗腰痛的系统综述，把全部证据评为<b>“极低质量”</b>。
+    其中唯一的随机对照试验发现，生活方式干预在减轻疼痛上<b>并不优于等待对照</b>（组间差 0.3 分，95% CI −0.4 到 1.0）。
+    只有减重手术（减重幅度远大于你这 25 天）的单臂研究显示疼痛下降 0.7–5.0 分。</p>
+    <p style="font-size:14px;margin:11px 0 0;padding-top:11px;border-top:1px dashed #DDE3D7">
+    <b>所以别指望减重把腰治好。</b>腰要靠上面那几个针对性动作去治 —— 拉开腰方肌、把腹肌和臀肌练回来、频繁打断静态姿势。
+    减重对腰长期有帮助，但它<b>不是这 25 天的止痛方案</b>，这两件事要分开算账。</p>
+  </div>
+
+  <h3>下腰的酸还有这几层</h3>
+  <table>
+    <thead><tr><th style="width:26%">机制</th><th>发生了什么</th></tr></thead>
+    <tbody>
+    <tr><td><b>静态负荷与蠕变</b></td><td>常听到的"坐着比站着椎间盘压力高 40%"其实<b>是过时的</b> —— 那来自 1960 年代 Nachemson 用老式液压传感器的测量，
+      1990 年后的在体测量显示<b>坐和站的压力差不多</b>（Wilke 1999 甚至测到坐着略低）。<br>
+      真正的问题不是压力大，而是<b>压力一直不变</b>：韧带和椎间盘在持续静态负荷下发生蠕变（creep）逐渐失去刚度，
+      同时姿势肌整天维持低强度收缩累积疲劳。<b>所以解药是"变"，不是"某个正确姿势"</b>。</td></tr>
+    <tr><td><b>驼背前倾坐</b></td><td>但<b>姿势在坐姿之内确实要紧</b>：躯干前倾驼背时腰椎间盘压力可达站立位的约 <b>190%</b>。
+      你对着笔记本低头的那个姿势，正是最差的一种。这就是屏幕垫高这件事的全部意义。</td></tr>
+    <tr><td><b>髂腰肌缩短</b></td><td>久坐让髋屈肌长期处在缩短位，它把骨盆往前拽 → 腰椎前凸加大 → 后方小关节持续挤压。<b>这是最常见的直接原因，也最好解决。</b></td></tr>
+    <tr><td><b>臀肌失活</b></td><td>整天坐着压住臀肌，它逐渐不再主动发力。伸髋的活没人干，腰就替它干 —— 竖脊肌长期代偿性紧张，就是你感到的那种酸。</td></tr>
+    <tr><td><b>体重与体型</b></td><td>102.5 公斤压在腰椎上，而且脂肪主要在腹部，力臂长、力矩大（见上）。不过要说清楚：<b>减重对缓解腰痛的临床证据很弱</b>，别把它当止痛手段。减重是为了长期，止痛要靠针对性训练。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid2" style="margin-top:22px">
+    <div class="box ok"><h4>今天就开始做，不用等</h4>
+      <ul class="tick" style="margin-bottom:0">
+        <li><b>髂腰肌拉伸</b> 每侧 45 秒 × 每天 3–4 次 —— <b>见效最快的一个</b>，很多人两三天就明显松快</li>
+        <li><b>臀桥</b> 2 组 × 15 次，每天。做完该是屁股酸，腰酸说明你在用腰代偿，把动作放慢</li>
+        <li><b>死虫</b> 2 组 × 每侧 10 次，每天。腰全程贴地</li>
+        <li><b>仰卧腿架高</b>：平躺，小腿搁在椅面上成 90/90，待 5 分钟。直接卸掉腰椎压力</li>
+        <li><b>热敷</b> 15 分钟。你这是慢性僵硬不是急性外伤，<b>用热不用冰</b></li>
+      </ul></div>
+    <div class="box stop"><h4>别做这些，会让它更糟</h4>
+      <ul class="cross" style="margin-bottom:0">
+        <li><b>仰卧起坐、卷腹</b> —— 脊柱反复屈曲，对椎间盘最不友好。核心用死虫和平板练</li>
+        <li><b>站着直腿弯腰摸脚尖</b> —— 酸的时候这是最容易加重的动作</li>
+        <li><b>扭腰机、甩腰、拿拳头捶腰</b></li>
+        <li><b>躺着不动养几天</b> —— 卧床反而让下背痛好得更慢，该走还是要走</li>
+        <li>睡太软的床垫</li>
+      </ul></div>
+  </div>
+
+  <h3>工位调整 · 这个不改，拉伸做多少都会反弹</h3>
+  <div class="grid2">
+    <div class="box">
+      <ul style="margin:0;font-size:13.5px">
+        <li>屏幕上沿与眼睛平齐 —— 低头看笔记本是颈腰连锁问题的源头，配个支架和外接键盘</li>
+        <li>腰后垫靠垫或卷起的毛巾，维持腰椎自然前凸，别让腰塌成 C 形</li>
+        <li>椅子调高到<b>髋略高于膝</b>，能显著减少骨盆后倾</li>
+        <li>双脚踩实地面，不要盘腿、不要跷二郎腿</li>
+      </ul></div>
+    <div class="box warn"><h4>频率改一下</h4>
+      <p style="font-size:13.5px;margin:4px 0 0">原计划是每 45 分钟起来一次。<b>腰酸期间改成每 30 分钟</b>，
+      每次做一组髂腰肌拉伸就回去。</p>
+      <p style="font-size:13.5px;margin:10px 0 0">姿势本身没有好坏，<b>不动才是问题</b> ——
+      最好的坐姿是你下一个坐姿。频繁换姿势比追求某个"正确姿势"有用得多。</p></div>
+  </div>
+
+  <h3>训练怎么改</h3>
+  <p style="font-size:14px">下面训练区里，受影响的动作卡上都加了<span style="color:#C1121F">红色的腰部提示</span>。汇总：</p>
+  <table>
+    <thead><tr><th style="width:22%">动作</th><th style="width:16%">怎么办</th><th>原因</th></tr></thead>
+    <tbody>
+    <tr><td>哑铃罗马尼亚硬拉</td><td class="num" style="color:#C1121F"><b>停</b></td><td>全套里对腰负荷最高的动作。用臀桥顶上，腰好了再从最轻重量重建动作模式</td></tr>
+    <tr><td>山羊挺身</td><td class="num" style="color:#C1121F"><b>停</b></td><td>直接给腰椎加伸展负荷</td></tr>
+    <tr><td>哑铃俯身划船</td><td class="num" style="color:#9C6B10">换动作</td><td>改成胸部支撑划船或坐姿划船，把腰完全卸掉，练背效果不打折</td></tr>
+    <tr><td>高脚杯深蹲 / 登台阶 / 农夫行走</td><td class="num" style="color:#9C6B10">减重量</td><td>重量减半，深蹲只蹲到不酸的深度，踏板降到 20 厘米</td></tr>
+    <tr><td>死虫 / 臀桥 / 跪姿平板</td><td class="num" style="color:#2D6A4F"><b>加量</b></td><td>这三个就是下背痛的康复方案本身，每天做</td></tr>
+    <tr><td>髂腰肌拉伸 / 腘绳肌拉伸</td><td class="num" style="color:#2D6A4F"><b>加量</b></td><td>直接针对成因，每天 3–4 次</td></tr>
+    <tr><td>有氧（单车 / 椭圆）</td><td class="num" style="color:#2D6A4F">照常</td><td>都不冲击腰椎。但单车座椅别调太低，否则骨盆会左右摇</td></tr>
+    </tbody>
+  </table>
+  <p class="footnote"><b>什么时候恢复：</b>酸感完全消失后再稳 3–5 天，然后把硬拉和山羊挺身从<b>最轻重量</b>加回来，
+  每次只加一点。如果一周之后还是酸，或者中途出现上面任何一条红旗症状，去看骨科或康复科，别自己扛。
+  另外：腰酸期间照样要走满 12,000 步 —— 走路对下背痛是有益的，卧床休息反而拖慢恢复。</p>
+</section>
+
+<section>
+  <h2>A 日 · 下肢与核心</h2>
+  <p class="sub">点开任意动作看中文步骤和动图。全部来自你自己这个数据集。每组之间休息 60–90 秒，全程约 45 分钟。
+  重量选到<b>最后 2 次很吃力但动作不变形</b>为准，练完还能再做 5 次说明太轻了。</p>
+  <div class="exlist" id="dayA"></div>
+
+  <h2 style="margin-top:44px">B 日 · 上肢与背</h2>
+  <p class="sub">背和后肩是你久坐塌下去的地方，练这些同时在纠正圆肩驼背。这一天做完，站姿会立刻不一样。</p>
+  <div class="exlist" id="dayB"></div>
+
+  <h2 style="margin-top:44px">有氧与办公室拉伸</h2>
+  <p class="sub">102 公斤跑步会直接伤膝盖和跟腱 —— <b>25 天内一次都不要跑</b>。用下面这几种，
+  强度控制在"能完整说话但不能唱歌"，心率大约 117–137。</p>
+  <div class="exlist" id="dayC"></div>
+</section>
+
+<section>
+  <h2>吃什么</h2>
+  <p class="sub">不给你称重克数的食谱，你坚持不了三天。给的是你在公司楼下和外卖软件里真能点到的东西。</p>
+
+  <h3>一天的模板</h3>
+  <table>
+    <thead><tr><th style="width:11%">时间</th><th style="width:9%">热量</th><th>吃什么（任选一行）</th></tr></thead>
+    <tbody>
+    <tr><td><b>07:30</b><br>早餐</td><td class="num">450</td>
+      <td>鸡蛋 2 个 + 蛋白 2 个 + 全麦面包 2 片 + 无糖豆浆<br>
+      或　无糖希腊酸奶 200 克 + 生燕麦 40 克 + 一小把蓝莓<br>
+      <span style="color:#8894A8;font-size:12.5px">黑咖啡随便喝，但别加糖和奶精</span></td></tr>
+    <tr><td><b>12:00</b><br>午餐</td><td class="num">600</td>
+      <td>鸡胸 / 瘦牛肉 / 鱼 150 克 + 杂粮饭 150 克（熟重，约半碗）+ 绿叶菜管够<br>
+      <span style="color:#8894A8;font-size:12.5px">午餐是全天碳水最多的一顿，放在这里不影响晚上睡眠</span></td></tr>
+    <tr><td><b>16:00</b><br>加餐</td><td class="num">200</td>
+      <td>无糖酸奶一盒　或　蛋白粉一勺　或　水煮蛋 2 个 + 10 颗原味杏仁<br>
+      <span style="color:#8894A8;font-size:12.5px">这顿是防止你晚上暴食的，别省</span></td></tr>
+    <tr><td><b>19:00</b><br>晚餐</td><td class="num">550</td>
+      <td>蛋白 150 克 + 红薯 / 玉米 150 克 + 蔬菜 300 克，少油<br>
+      <span style="color:#8894A8;font-size:12.5px">21:30 之后不再进食，让胃在睡前排空</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>外卖和楼下怎么点</h3>
+  <table>
+    <thead><tr><th style="width:16%">你常点的</th><th>改成这样点</th></tr></thead>
+    <tbody>
+    <tr><td><b>麻辣烫</b></td><td>选<b>清汤或番茄汤底</b>，绝对不要麻酱（一勺 180 大卡）。蘸料用蒜泥 + 香醋 + 生抽。多拿绿叶菜、菌菇、豆腐、鸭血、虾滑，主食只拿一份。汤别喝。</td></tr>
+    <tr><td><b>兰州拉面</b></td><td>牛肉面（细面），额外要一份牛肉，免费的萝卜和蒜苗多加。<b>面汤别喝完</b>，钠含量能到一天的量。</td></tr>
+    <tr><td><b>黄焖鸡 / 猪脚饭</b></td><td>黄焖鸡去皮，米饭主动说"半份"。猪脚饭换成排骨饭或鸡腿饭去皮。</td></tr>
+    <tr><td><b>肯德基 / 麦当劳</b></td><td>板烧鸡腿堡（去酱）或安格斯牛堡 + 玉米杯 + 无糖可乐 ≈ 600 大卡，能吃。<br><b>炸鸡 + 薯条 + 可乐</b>那一套 ≈ 1,400 大卡，一顿吃掉你全天的 78%。</td></tr>
+    <tr><td><b>便利店</b></td><td>即食鸡胸、茶叶蛋、无糖酸奶、关东煮（别喝汤）、沙拉（<b>酱只挤三分之一</b>）、无糖茶。</td></tr>
+    <tr><td><b>火锅（社交场合）</b></td><td>清汤锅。点毛肚、鸭肠、虾滑、瘦牛肉、各种青菜。蘸料只用蒜泥 + 醋 + 小米辣，不碰麻酱和香油。这样一顿能压在 700 大卡内。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>可乐和炸鸡的退出路线</h3>
+  <div class="grid2">
+    <div class="box warn"><h4>可乐 · 分四段戒，别硬断</h4>
+      <table style="margin:6px 0 0"><tbody>
+      <tr><td class="num" style="width:26%"><b>第 1–3 天</b></td><td>换成无糖可乐，<b>喝多少都行</b>。先只断糖，不断习惯。</td></tr>
+      <tr><td class="num"><b>第 4–10 天</b></td><td>无糖可乐每天 ≤ 2 罐</td></tr>
+      <tr><td class="num"><b>第 11–18 天</b></td><td>每天 ≤ 1 罐，其余换气泡水 + 柠檬片</td></tr>
+      <tr><td class="num"><b>第 19 天起</b></td><td>只留气泡水。碳酸的爽感来自二氧化碳，不是糖。</td></tr>
+      </tbody></table>
+      <p style="font-size:13px;margin:12px 0 0;padding-top:11px;border-top:1px dashed #DDE3D7">
+      按你每天 2 瓶 500 毫升算：一天 420 大卡，25 天 10,500 大卡 = <b>2.7 斤纯脂肪</b>。
+      光这一项什么都不做就够掉近 3 斤。而且可乐里的果糖直接抬高血尿酸，对你是双重问题。</p></div>
+
+    <div class="box stop"><h4>炸鸡 · 25 天内停掉，给你替代品</h4>
+      <p style="font-size:13.5px;margin:4px 0">问题不在鸡，在裹粉和油炸 —— 鸡胸本身 165 大卡/100 克，裹粉炸完变 290+。</p>
+      <p style="font-size:13.5px;margin:10px 0 0"><b>空气炸锅版</b>：鸡腿去皮，蘸蛋液，裹燕麦麸 + 黑胡椒 + 蒜粉 + 少量盐，
+      200 度 15 分钟中途翻面。口感接近，热量只有三分之一。</p>
+      <p style="font-size:13.5px;margin:10px 0 0"><b>想吃脆的</b>：烤鸡胸切条 + 生菜 + 是拉差辣酱，卷全麦饼。</p>
+      <p style="font-size:13px;margin:12px 0 0;padding-top:11px;border-top:1px dashed #DDE3D7;color:#5C6B85">
+      25 天后可以恢复到<b>每两周一次</b>，把它当奖励而不是日常。彻底禁止一辈子的规矩，你一定守不住。</p></div>
+  </div>
+
+  <h3>红黑榜</h3>
+  <div class="grid2">
+    <div class="box ok"><h4>管够，吃到饱都行</h4>
+      <ul class="tick" style="margin-bottom:0">
+        <li>所有绿叶菜、西兰花、菌菇、黄瓜、番茄、白萝卜</li>
+        <li>鸡胸、虾、鱼、瘦牛肉、鸡蛋白、豆腐</li>
+        <li>无糖酸奶、无糖豆浆、黑咖啡、茶、气泡水</li>
+        <li>魔芋制品（几乎零热量，扛饿）</li>
+      </ul></div>
+    <div class="box stop"><h4>25 天内一口不碰</h4>
+      <ul class="cross" style="margin-bottom:0">
+        <li>含糖饮料、奶茶、果汁（果汁不比可乐健康）</li>
+        <li>油炸食品、烧烤、麻酱、沙拉酱、蛋黄酱</li>
+        <li>白酒啤酒 —— 酒精不仅有热量，还会<b>直接停掉脂肪分解</b>并抬高尿酸</li>
+        <li>宵夜。想吃就去睡觉，饥饿感 20 分钟会自己过去</li>
+      </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>作息 · 你最大的杠杆在这里</h2>
+  <p class="sub">睡眠限制到 4 小时后，瘦素下降约 18%、饥饿素上升约 28%，饥饿感高 24%、食欲高 23%，且
+  <b>食欲上升最明显的正是高热量、高碳水的食物</b>（Spiegel 2004，12 名平均 22 岁的健康男性 —— 和你同一个人群）。
+  换句话说，熬夜不是"少消耗了一点"，是<b>直接改写你第二天想吃什么</b>。饮食和训练都做对而继续熬夜，这个方案会失败。</p>
+
+  <h3>25 天里怎么把作息掰回来</h3>
+  <p style="font-size:14px">别指望今晚就 23:30 睡，你躺下也睡不着。每 3 天提前 30 分钟，身体跟得上：</p>
+  <table>
+    <thead><tr><th style="width:20%">天数</th><th style="width:22%">上床时间</th><th style="width:20%">起床时间</th><th>这几天的重点</th></tr></thead>
+    <tbody>
+      <tr><td class="num">第 1–3 天</td><td class="num">01:30</td><td class="num">08:00</td><td>只做一件事：<b>固定起床时间</b>，哪怕没睡够也起</td></tr>
+      <tr><td class="num">第 4–6 天</td><td class="num">01:00</td><td class="num">07:45</td><td>14:00 后停掉所有咖啡因</td></tr>
+      <tr><td class="num">第 7–9 天</td><td class="num">00:30</td><td class="num">07:30</td><td>起床后 10 分钟内到窗边或户外见光</td></tr>
+      <tr><td class="num">第 10–12 天</td><td class="num">00:00</td><td class="num">07:15</td><td>睡前 60 分钟手机开夜览并调暗到最低</td></tr>
+      <tr><td class="num">第 13–15 天</td><td class="num">23:30</td><td class="num">07:00</td><td>到位。卧室调到 18–20 度，遮光</td></tr>
+      <tr><td class="num">第 16–25 天</td><td class="num">23:30</td><td class="num">07:00</td><td>稳住。周末也别超过 1 小时的偏差</td></tr>
+    </tbody>
+  </table>
+
+  <h3>一天的时间表</h3>
+  <ul class="tl">
+    <li><span class="t">07:00　起床</span><div class="c">睁眼就喝 500 毫升水。<b>10 分钟内见到自然光</b> —— 这是重设生物钟最有效的一步，比任何助眠药都管用。</div></li>
+    <li><span class="t">07:30　早餐</span><div class="c">高蛋白。醒来一小时内吃够蛋白质能压住一整天的食欲。</div></li>
+    <li><span class="t">09:00–18:00　工作</span><div class="c">每 45 分钟站起来 2 分钟。番茄钟结束就是起立信号，不用另外设闹钟。</div></li>
+    <li><span class="t">14:00　咖啡因截止</span><div class="c">咖啡因半衰期 5–6 小时。下午 4 点的那杯，到半夜还有四分之一在你血液里。</div></li>
+    <li><span class="t">18:30　训练</span><div class="c">力量或有氧。练完到睡觉之间隔了 5 小时，不影响入睡。</div></li>
+    <li><span class="t">19:30　晚餐</span><div class="c">练完 1 小时内吃，蛋白质优先。</div></li>
+    <li><span class="t">21:30　停止进食</span><div class="c">之后只喝水。</div></li>
+    <li><span class="t">22:30　关屏幕</span><div class="c">手机放到<b>够不着的地方充电</b>。这是全天最难的一件事，也是最有效的一件。</div></li>
+    <li><span class="t">23:30　上床</span><div class="c">全黑、18–20 度、安静。躺下 20 分钟睡不着就起来在暗处坐着，别在床上刷手机。</div></li>
+  </ul>
+</section>
+
+<section>
+  <h2>久坐怎么破</h2>
+  <p class="sub">你每天上班坐 9 小时以上。这件事上我要先纠正一个流传很广的说法：
+  "再怎么练也抵不掉久坐"<b>是不对的</b>。Ekelund 等人 2016 年汇总 100 万人以上的数据发现，
+  运动量最少的人久坐带来的全因死亡风险升高 93%，而<b>运动量最大的那组（相当于每天 60–75 分钟中等强度活动）升高只有 16%，基本被抵消掉了</b>。
+  你这套计划的 45 分钟训练 + 12,000 步正好落在这个量级 —— <b>就死亡率而言，你练够了就是抵得掉的</b>。<br>
+  但<b>腰背痛是另一回事</b>：它由静态姿势本身引起，晚上练一小时不能替代白天起身。所以下面两件事仍然要分开做。</p>
+  <div class="grid2">
+    <div class="box"><h4>每 45 分钟，站起来 2 分钟</h4>
+      <p style="font-size:13.5px;margin:4px 0 10px">不用去健身房，就在工位旁边（动作卡在上面那一节）：</p>
+      <ul style="margin-bottom:0;font-size:13.5px">
+        <li>靠墙高抬腿 30 秒</li>
+        <li>门框胸部拉伸 30 秒 —— 直接对抗你的圆肩</li>
+        <li>髂腰肌拉伸 每侧 30 秒 —— 久坐最紧的一块，也是腰疼的来源</li>
+        <li>颈侧拉伸 每侧 20 秒</li>
+      </ul></div>
+    <div class="box"><h4>12,000 步怎么凑出来</h4>
+      <table style="margin:4px 0 0"><tbody>
+      <tr><td class="num" style="width:52%">提前两站下车</td><td class="num">+3,000</td></tr>
+      <tr><td class="num">午饭走远一点吃</td><td class="num">+2,500</td></tr>
+      <tr><td class="num">每 45 分钟起来走</td><td class="num">+2,000</td></tr>
+      <tr><td class="num">晚饭后散步 25 分钟</td><td class="num">+3,000</td></tr>
+      <tr><td class="num">日常零散</td><td class="num">+1,500</td></tr>
+      </tbody></table>
+      <p style="font-size:13px;color:#5C6B85;margin:11px 0 0;padding-top:10px;border-top:1px dashed #DDE3D7">
+      你 185cm，步幅大，12,000 步约 9.3 公里，比一般人同样步数多烧不少。<b>走路是你现在性价比最高的运动</b> ——
+      不伤膝盖、不需要恢复、不影响力量训练。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>开始之前，先去做这几项检查</h2>
+  <p class="sub">205 斤 + 长期炸鸡可乐熬夜这个组合，大概率已经有一些指标不正常了。花两百块查一次，
+  比闷头练 25 天再出问题划算得多。</p>
+
+  <div class="grid2">
+    <div class="box"><h4>开始前该查的</h4>
+      <ul style="margin-bottom:0;font-size:13.5px">
+        <li>血压</li>
+        <li>空腹血糖 + 糖化血红蛋白</li>
+        <li>血脂四项</li>
+        <li><b>血尿酸</b> —— 你这个饮食史属于高危</li>
+        <li>肝功能 ALT / AST + 肝胆 B 超（查脂肪肝和结石）</li>
+        <li>肾功能</li>
+        <li><b>性激素六项</b> —— 因为你提到胸部，需要排除真性男性乳腺发育</li>
+      </ul></div>
+    <div class="box warn"><h4>快速减重本身带来的两个风险</h4>
+      <p style="font-size:13.5px;margin:4px 0 0"><b>痛风发作</b>：体重快速下降时脂肪分解产生的酮体会和尿酸竞争排泄通道，
+      血尿酸短期反而升高，可能诱发急性痛风。这就是为什么方案里<b>每天 3.5 升水是硬性的</b>，
+      也是为什么<b>不让你做生酮</b> —— 碳水必须留 150 克。</p>
+      <p style="font-size:13.5px;margin:12px 0 0"><b>胆结石</b>：快速减重 + 极低脂饮食会让胆囊长时间不收缩，胆汁淤积成石。
+      文献里有个具体阈值：<b>一餐约 10 克脂肪</b>才够让胆囊有效排空。
+      方案给的 55 克/天摊到四餐约 14 克/餐，就是踩着这条线设计的 —— <b>所以 55 克是下限不是上限，别自作主张再砍</b>。<br>
+      另外供参考：文献把"快速减重"定义为每周超过 3 磅（约 2.7 斤）。你前 25 天平均会超过这个数，
+      但超出的部分几乎全是第一周的水，<b>真正的脂肪减速约为每周 2.4 斤，在安全线内</b>。</p></div>
+  </div>
+
+  <div class="box stop" style="margin-top:20px">
+    <h4>出现这些立刻停止训练并就医，不要"再坚持一下"</h4>
+    <div class="grid2" style="gap:0 26px;margin-top:6px">
+      <ul class="cross" style="margin:0">
+        <li>胸痛、胸闷，或安静状态下心慌</li>
+        <li>头晕、眼前发黑、站起来要扶东西</li>
+        <li>单侧小腿肿胀疼痛（警惕血栓）</li>
+      </ul>
+      <ul class="cross" style="margin:0">
+        <li>小便颜色深如浓茶（警惕横纹肌溶解）</li>
+        <li>关节突然红肿剧痛，尤其大脚趾（痛风）</li>
+        <li>右上腹绞痛并向右肩放射（胆绞痛）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>记录</h2>
+  <p class="sub">每天早上排空小便后、空腹、只穿内裤称。<b>单日数字毫无意义</b> ——
+  一顿咸的能让你第二天重 2 斤。只看 7 天滚动平均和曲线的整体方向。</p>
+
+  <div class="logform">
+    <div><label for="dnum">第几天（0–25）</label><input type="number" id="dnum" min="0" max="25" step="1" placeholder="0"></div>
+    <div><label for="wnum">体重（斤）</label><input type="number" id="wnum" min="120" max="260" step="0.1" placeholder="205.0"></div>
+    <button class="act" id="addBtn">记录</button>
+    <button class="ghost" id="clrBtn">清空记录</button>
+  </div>
+  <div id="avgline" style="font-size:14px;margin:6px 0 0"></div>
+
+  <h3>除了体重，这两个更诚实</h3>
+  <div class="grid3">
+    <div class="box"><h4>腰围</h4><p style="font-size:13.5px;margin:0">每周量一次，肚脐水平，
+    早上空腹、正常呼气末测。<b>体重不动但腰围在小</b>是最好的信号，说明在掉脂肪长肌肉。</p></div>
+    <div class="box"><h4>照片</h4><p style="font-size:13.5px;margin:0">第 0、12、25 天各拍一次。
+    同一面墙、同一时间、同一光线、同样只穿内裤，正面侧面背面各一张。<b>25 天里你看不出自己的变化，照片能</b>。</p></div>
+    <div class="box"><h4>训练记录</h4><p style="font-size:13.5px;margin:0">每个动作记下重量和次数。
+    <b>热量缺口下还能加重量</b>，说明肌肉保住了。如果重量一路下滑，是蛋白或睡眠出了问题。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>依据</h2>
+  <p class="sub">这页里凡是给了具体数字的地方，来源列在下面，你可以自己去核。
+  写这页的过程中我查证后<b>推翻了自己原本写的两条</b>，一并标出来。</p>
+
+  <table>
+    <thead><tr><th style="width:27%">页面里的说法</th><th style="width:14%">状态</th><th>依据</th></tr></thead>
+    <tbody>
+    <tr><td>坐姿椎间盘压力比站立高 40%</td><td class="num" style="color:#C1121F"><b>已删除</b></td>
+      <td>这是 Nachemson 1964–70 年用液压传感器的旧数据，其读数约为后来测量的两倍。Wilke 1999 的在体测量显示坐姿压力可能<b>略低于</b>站立；2022 年的系统综述与荟萃分析发现，1990 年后的研究<b>坐站之间无显著差异</b>。已改为静态负荷与蠕变机制。</td></tr>
+    <tr><td>下班练一小时抵不掉白天坐九小时</td><td class="num" style="color:#C1121F"><b>已更正</b></td>
+      <td>Ekelund 等 2016 年对 100 万人以上数据的协调荟萃分析：运动量最低组久坐相关全因死亡风险 +93%，<b>运动量最高组（约每天 60–75 分钟中等强度）仅 +16%，关联基本消失</b>。原说法过强。</td></tr>
+    <tr><td>驼背前倾坐时压力达站立的 190%</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>躯干前倾使负荷从主动肌肉转移到被动结构，这是坐姿之内姿势仍然要紧的原因。</td></tr>
+    <tr><td>瘦素 −18%、饥饿素 +28%</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>Spiegel 等 2004，<i>Ann Intern Med</i>：12 名平均 22 岁健康男性，睡眠限制至 4 小时。另测得饥饿感 +24%、食欲 +23%，高热量高碳水食物最明显。样本小，但方向已被反复重复验证。</td></tr>
+    <tr><td>1 克糖原结合约 3 克水</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>常引用值为 3–4 克。成人约储存 500 克糖原，低碳水饮食第一周体重下降的水分部分文献报告为 2–3 公斤；你体重大、糖原池更大，所以本页取了偏上限的 4 公斤左右。</td></tr>
+    <tr><td>每餐 10 克脂肪的胆囊阈值</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>约 10 克脂肪是有效刺激胆囊排空的阈值；极低脂的极低热量饮食会造成胆囊淤滞。这是本页脂肪设为 55 克/天下限的直接依据。</td></tr>
+    <tr><td>快速减重会抬高尿酸、诱发痛风</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>快速减重（文献定义为每周 &gt;3–4 磅）期间酮体与尿酸竞争肾脏排泄通道，血尿酸可短期上升，<b>即使既往没有高尿酸也可能诱发急性痛风</b>。这是本页坚持 3.5 升水、不做生酮、碳水保留 150 克的原因。</td></tr>
+    <tr><td>减重能缓解腰痛</td><td class="num" style="color:#C1121F"><b>已更正</b></td>
+      <td>2022 年系统综述（BMC Musculoskelet Disord）把全部证据评为<b>极低质量</b>；唯一的 RCT（Williams 2018）显示生活方式干预<b>不优于等待对照</b>（疼痛组间差 0.3 分，95% CI −0.4 到 1.0）。仅减重手术的单臂研究显示疼痛下降 0.7–5.0 分。原文“减 17 斤对腰是实打实的卸载”说得太满，已改。</td></tr>
+    <tr><td>腹型肥胖加重腰部肌肉负荷</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>腹部脂肪位于脊柱前方形成力臂，产生前屈力矩，需由竖脊肌与腰方肌持续等长收缩对抗；同时骨盆前倾加大腰椎前凸。研究还发现<b>脂肪分布形状独立于体重影响脊柱负荷</b>，腹型比外周型更不利。</td></tr>
+    <tr><td>腰方肌是该位置最可能的来源</td><td class="num" style="color:#2D6A4F">成立</td>
+      <td>腰方肌自髂嵴连至第 12 肋及 L1–L4 横突；其下部触发点位于竖脊肌与髂嵴交汇处深部，牵涉痛投射至髂嵴、骶髂关节与大转子。久坐致其慢性缩短，腹肌薄弱或髂腰肌紧张时代偿加剧。</td></tr>
+    <tr><td>上背：拉紧的、练弱的</td><td class="num" style="color:#9C6B10">部分修正</td>
+      <td>系统综述结论是<b>拉伸紧张肌 + 强化薄弱肌 + 动作控制训练三者结合</b>最有效，单用任何一项都不够。原文"需要练强而不是拉松"说得太绝对，已补充说明。</td></tr>
+    </tbody>
+  </table>
+  <p class="footnote">主要文献：Wilke et al., <i>Spine</i> 1999；Zhang et al., 坐立位在体椎间盘压力系统综述与荟萃分析，2022 (PMC8950176)；
+  Ekelund et al., <i>Lancet</i> 2016；Spiegel et al., <i>Ann Intern Med</i> 2004；低热量摄入与胆囊运动功能综述，2000 (PMID 10903004)；
+  Chang et al., 减重项目治疗腰痛系统综述, <i>BMC Musculoskelet Disord</i> 2022 (PMC9125929)；
+  Ghezelbash et al., 肥胖与体型对脊柱生物力学的影响, 2017 (PMID 28608245)。</p>
+</section>
+
+<footer>
+  本页面按你给的数据（男 · 25 岁 · 185cm · 102.5 公斤 · 久坐）算出，换个人数字就不成立。
+  热量估算用 Mifflin-St Jeor 公式，活动系数取 1.5，脂肪按 7,700 大卡/公斤折算。
+  这是训练和饮食安排，不是医疗建议 —— 如果你已经在吃降压药、降糖药或有痛风病史，先跟医生确认再开始。
+  动作数据与动图来自本仓库 data/exercises.json。
+</footer>
+
+</div>
+
+<script>
+"use strict";
+const EX = [{"id":"1760","name":"dumbbell goblet squat","eq":"dumbbell","bp":"upper legs","target":"quads","img":"images/1760-yn8yg1r.jpg","gif":"videos/1760-yn8yg1r.gif","zh":["双脚分开与肩同宽站立，双手握住哑铃垂直放在胸前。","保持胸部挺直，核心收紧，通过向后推臀部并弯曲膝盖，将身体降低至蹲姿。","继续降低，直到大腿与地面平行，或者尽可能低。","在底部停顿片刻，然后推动脚后跟回到起始位置。","重复所需的重复次数。"]},{"id":"1459","name":"dumbbell romanian deadlift","eq":"dumbbell","bp":"upper legs","target":"glutes","img":"images/1459-rR0LJzx.jpg","gif":"videos/1459-rR0LJzx.gif","zh":["双脚分开与肩同宽站立，双手各握一个哑铃，正握。","保持背部挺直，核心收紧，以臀部为铰链，将哑铃向地面降低，让膝盖稍微弯曲。","降低哑铃，直到感觉到腿筋拉伸，然后推动脚后跟并收紧臀肌，回到起始位置。","重复所需的重复次数。"]},{"id":"0431","name":"dumbbell step-up","eq":"dumbbell","bp":"upper legs","target":"glutes","img":"images/0431-aXtJhlg.jpg","gif":"videos/0431-aXtJhlg.gif","zh":["站在长凳或台阶前，每只手各握一个哑铃，手掌朝向身体。","将右脚放在长凳或台阶上，确保整个脚与表面接触。","推动右脚跟，将身体抬起到长凳或台阶上，伸直右腿。","将左脚放在长凳或台阶上，完全直立。","左脚向后退一步，然后是右脚，回到起始位置。","重复所需的重复次数，然后换腿。"]},{"id":"3013","name":"low glute bridge on floor","eq":"body weight","bp":"upper legs","target":"glutes","img":"images/3013-u0cNiij.jpg","gif":"videos/3013-u0cNiij.gif","zh":["平躺，膝盖弯曲，双脚平放在地上。","将手臂放在身体两侧，手掌朝下。","启动臀肌和核心肌群，然后将臀部抬离地面，直到身体从膝盖到肩膀形成一条直线。","在顶部暂停片刻，挤压臀部。","慢慢地将臀部放回起始位置。","重复所需的重复次数。"]},{"id":"0276","name":"dead bug","eq":"body weight","bp":"waist","target":"abs","img":"images/0276-iny3m5y.jpg","gif":"videos/0276-iny3m5y.gif","zh":["平躺，双臂伸向天花板。","弯曲膝盖，将双腿抬离地面，使臀部和膝盖形成 90 度角。","接合你的核心和下背部，将你的下背部压入地面。","慢慢地将右臂和左腿放低至地面，保持它们伸直并悬停在地板上方。","暂停片刻，然后回到起始位置。","用左臂和右腿重复该动作。","继续交替进行所需的重复次数。"]},{"id":"3239","name":"kneeling plank tap shoulder (male)","eq":"body weight","bp":"waist","target":"abs","img":"images/3239-h1ezqSu.jpg","gif":"videos/3239-h1ezqSu.gif","zh":["从跪姿开始，双手放在地上，与肩同宽。","将双腿伸到身后，用脚趾支撑，将身体抬起成平板支撑姿势。","保持核心参与并保持臀部稳定，将一只手抬离地面并拍打另一侧的肩膀。","将手放回地面并用另一只手重复此操作。","继续交替进行所需的重复次数。"]},{"id":"0493","name":"incline push-up","eq":"body weight","bp":"chest","target":"pectorals","img":"images/0493-B1EVP9F.jpg","gif":"videos/0493-B1EVP9F.gif","zh":["将双手放在较高的表面上，例如长凳或台阶上，双手之间的距离略宽于肩宽。","将双腿伸到身后，放在脚掌上，从头到脚跟形成一条直线。","弯曲肘部，将胸部向升高的表面降低，保持身体呈一条直线。","在底部暂停片刻，然后伸直手臂将自己推回起始位置。","重复所需的重复次数。"]},{"id":"0293","name":"dumbbell bent over row","eq":"dumbbell","bp":"back","target":"upper back","img":"images/0293-BJ0Hz5L.jpg","gif":"videos/0293-BJ0Hz5L.gif","zh":["双脚分开与肩同宽站立，膝盖稍微弯曲，双手各握一个哑铃，手掌朝向身体。","臀部向前弯曲，保持背部挺直，核心肌群参与。","让你的手臂垂直垂向地板，肘部稍微弯曲。","将哑铃拉向胸部，将肩胛骨挤压在一起。","在顶部停顿片刻，然后慢慢将哑铃放回起始位置。","重复所需的重复次数。"]},{"id":"0017","name":"assisted pull-up","eq":"leverage machine","bp":"back","target":"lats","img":"images/0017-kiJ4Z2K.jpg","gif":"videos/0017-kiJ4Z2K.gif","zh":["将机器调整至您所需的体重和高度设置。","正手握住手柄，握距略宽于肩宽。","双臂完全伸展，双脚离开地面。","收紧背部肌肉，将身体拉向手柄，保持肘部靠近身体。","继续拉，直到下巴位于手柄上方。","在顶部停顿片刻，然后慢慢将身体放回起始位置。","重复所需的重复次数。"]},{"id":"0361","name":"dumbbell one arm shoulder press","eq":"dumbbell","bp":"shoulders","target":"delts","img":"images/0361-84RyJf8.jpg","gif":"videos/0361-84RyJf8.gif","zh":["双脚分开与肩同宽站立，一只手握住哑铃，与肩同高，手掌朝前。","向上推哑铃，直到手臂完全伸过头顶。","在最高点暂停片刻，然后慢慢将哑铃放回起始位置。","重复所需的重复次数，然后换到另一只手臂。"]},{"id":"0383","name":"dumbbell reverse fly","eq":"dumbbell","bp":"shoulders","target":"delts","img":"images/0383-EAs3xL9.jpg","gif":"videos/0383-EAs3xL9.gif","zh":["双脚分开与肩同宽站立，每只手各握一个哑铃。","稍微弯曲膝盖，髋部向前转动，保持背部挺直。","将双臂伸直在身前，手掌相对。","保持肘部轻微弯曲，将手臂向两侧抬起，直到与地面平行。","在顶部暂停片刻，然后慢慢将手臂放回起始位置。","重复所需的重复次数。"]},{"id":"0464","name":"front plank with twist","eq":"body weight","bp":"waist","target":"abs","img":"images/0464-CosupLu.jpg","gif":"videos/0464-CosupLu.gif","zh":["从高平板支撑位置开始，双手直接放在肩膀下方，身体从头到脚成一条直线。","调动你的核心和臀部以保持稳定的位置。","将躯干向右旋转，抬起右臂并向天花板延伸。","扭转时保持臀部和腿部稳定。","保持片刻，然后回到起始位置。","在左侧重复扭转。","继续交替进行所需的重复次数。"]},{"id":"0489","name":"hyperextension","eq":"body weight","bp":"back","target":"spine","img":"images/0489-zhMwOwE.jpg","gif":"videos/0489-zhMwOwE.gif","zh":["调整过度伸展凳，使大腿上部放在垫子上并且双脚固定。","双臂交叉放在胸前或将双手放在脑后。","将上半身压向地面，同时保持背部挺直。","在底部停顿片刻，然后抬起上半身，直到与双腿成一直线。","重复所需的重复次数。"]},{"id":"0798","name":"stationary bike walk","eq":"leverage machine","bp":"cardio","target":"cardiovascular system","img":"images/0798-a8VDgLw.jpg","gif":"videos/0798-a8VDgLw.gif","zh":["调整固定自行车上的座椅高度和位置，以确保正确对齐。","将脚放在踏板上，并用带子（如果有）将其固定。","以舒适的速度开始踩踏，保持背部挺直，核心参与。","保持稳定的节奏，并根据需要增加阻力水平。","继续踩踏您的有氧运动所需的持续时间。","通过逐渐降低步速和阻力水平来冷静下来。","锻炼后伸展腿部肌肉，以防止紧绷并促进恢复。"]},{"id":"2141","name":"walk elliptical cross trainer","eq":"elliptical machine","bp":"cardio","target":"cardiovascular system","img":"images/2141-rjtuP6X.jpg","gif":"videos/2141-rjtuP6X.gif","zh":["将椭圆机的阻力水平和倾斜度调整到您想要的设置。","踩上机器的踏板并轻轻握住手柄。","首先用脚向下压，然后将手柄拉向身体。","继续这个动作，交替推和拉，以模拟行走或跑步动作。","在整个练习过程中保持稳定的步伐并保持核心参与。","继续进行有氧运动所需的持续时间。","下车前逐渐降低机器的强度和速度。"]},{"id":"2133","name":"farmers walk","eq":"dumbbell","bp":"upper legs","target":"quads","img":"images/2133-qPEzJjA.jpg","gif":"videos/2133-qPEzJjA.gif","zh":["站直，双手各握一个哑铃，手掌朝向身体两侧。","保持背部挺直，肩膀向后。","向前迈出小步，控制住，保持直立姿势。","继续步行所需的距离或时间。","最后，停止行走并小心地将哑铃降低到身体两侧。"]},{"id":"1403","name":"neck side stretch","eq":"body weight","bp":"neck","target":"levator scapulae","img":"images/1403-x2chWLO.jpg","gif":"videos/1403-x2chWLO.gif","zh":["站直或坐直，肩膀放松。","将头向一侧倾斜，将耳朵靠近肩膀。","保持拉伸 15-30 秒。","在另一侧重复。","每侧进行 2-4 组。"]},{"id":"1405","name":"back pec stretch","eq":"body weight","bp":"back","target":"lats","img":"images/1405-chfnQnM.jpg","gif":"videos/1405-chfnQnM.gif","zh":["站直，双脚分开与肩同宽。","将双臂伸直在身前，与地面平行。","双臂交叉在身体前方，右臂放在左臂上方。","手指交叉，手掌旋转远离身体。","慢慢抬起手臂并远离身体，感觉背部和胸部有拉伸感。","保持拉伸 15-30 秒，然后放松。","在另一侧重复。"]},{"id":"1511","name":"hamstring stretch","eq":"body weight","bp":"upper legs","target":"hamstrings","img":"images/1511-99rWm7w.jpg","gif":"videos/1511-99rWm7w.gif","zh":["双脚分开与肩同宽站立。","右脚向前迈出一步，将重心转移到右腿上。","保持背部挺直，臀部慢慢向前弯曲，双手伸向右脚。","保持伸展动作 20-30 秒，然后回到起始位置。","在另一侧重复。"]},{"id":"0628","name":"monster walk","eq":"body weight","bp":"upper legs","target":"glutes","img":"images/0628-O95afRA.jpg","gif":"videos/0628-O95afRA.gif","zh":["在脚踝周围放置一根阻力带。","双脚分开与肩同宽站立，稍微弯曲膝盖。","右脚向一侧迈出一步，保持阻力带的张力。","左脚跟随，向一侧迈步以返回起始位置。","重复所需的重复次数，然后换边。"]},{"id":"0716","name":"side push neck stretch","eq":"body weight","bp":"neck","target":"levator scapulae","img":"images/0716-oQRJYkC.jpg","gif":"videos/0716-oQRJYkC.gif","zh":["站直或坐直，肩膀放松。","将头向右倾斜，将右耳靠近右肩。","将右手放在头部左侧，轻轻施加压力以增加拉伸。","保持拉伸 15-30 秒。","在另一侧重复，将头向左倾斜并用左手施加压力。","每侧重复拉伸 2-3 次。"]},{"id":"1564","name":"intermediate hip flexor and quad stretch","eq":"rope","bp":"upper legs","target":"quads","img":"images/1564-tFGKm99.jpg","gif":"videos/1564-tFGKm99.gif","zh":["站直，双脚分开与肩同宽。","抓住一个稳定的物体作为支撑。","弯曲右膝，将右脚移向臀部，用右手抓住绳子。","慢慢地将右脚拉向臀部，感受右股四头肌的拉伸。","保持拉伸 20-30 秒。","松开拉伸并在左侧重复。"]},{"id":"3636","name":"high knee against wall","eq":"body weight","bp":"cardio","target":"cardiovascular system","img":"images/3636-ealLwvX.jpg","gif":"videos/3636-ealLwvX.gif","zh":["面向墙壁站立，双脚分开与臀部同宽。","将双手放在墙上以获得支撑。","启动你的核心并将右膝抬向胸部，同时将左脚保持在地面上。","快速换腿，将左膝抬向胸部，然后将右脚放低。","继续交替双腿进行跑步动作，将膝盖尽可能抬高。","在整个练习过程中保持快节奏并保持上半身稳定。","重复所需的持续时间或重复次数。"]},{"id":"2330","name":"cable lat pulldown full range of motion","eq":"cable","bp":"back","target":"lats","img":"images/2330-LEprlgG.jpg","gif":"videos/2330-LEprlgG.gif","zh":["坐在高位下拉机上，膝盖位于护垫下方。","正手握住电缆杆，握距略宽于肩宽。","稍微向后倾斜，挺胸，保持下背部轻微的拱形。","将杠铃向下拉至上胸部，将肩胛骨挤压在一起。","在动作底部暂停片刻，然后慢慢松开杠铃回到起始位置。","重复所需的重复次数。"]},{"id":"3785","name":"incline push-up (on box)","eq":"body weight","bp":"chest","target":"pectorals","img":"images/3785-F7vjXqT.jpg","gif":"videos/3785-F7vjXqT.gif","zh":["将双手放在盒子或高架表面的边缘，距离略宽于肩宽。","将双腿伸到身后，放在脚掌上，从头到脚跟形成一条直线。","弯曲肘部，将胸部向箱子方向降低，保持身体呈一条直线。","在底部暂停片刻，然后伸直手臂将自己推回起始位置。","重复所需的重复次数。"]},{"id":"2398","name":"close-grip push-up (on knees)","eq":"body weight","bp":"upper arms","target":"triceps","img":"images/2398-v3vLFW0.jpg","gif":"videos/2398-v3vLFW0.gif","zh":["首先双手和膝盖着地，双手与肩同宽，膝盖与臀部同宽。","弯曲肘部，将上身压向地面，使其靠近身体两侧。","当你的胸部刚好高于地面时，暂停片刻。","推动手掌以伸直手臂并返回到起始位置。","重复所需的重复次数。"]},{"id":"2208","name":"roller back stretch","eq":"roller","bp":"back","target":"spine","img":"images/2208-isofgzg.jpg","gif":"videos/2208-isofgzg.gif","zh":["首先坐在地上，双腿在身前伸展。","将滚轮垂直于您的身体放置，位于臀部下方。","慢慢向后滚动你的身体，让滚轮向上移动你的背部。","继续滚动，直到滚轮到达您的上背部。","暂停片刻，然后慢慢滚回到起始位置。","重复所需的重复次数。"]},{"id":"1365","name":"upper back stretch","eq":"body weight","bp":"back","target":"upper back","img":"images/1365-GSDioYu.jpg","gif":"videos/1365-GSDioYu.gif","zh":["站直，双脚分开与肩同宽。","将双臂伸直在身前，与地面平行。","手指交叉，手掌旋转远离身体。","慢慢地将手臂举过头顶，保持它们伸直并彼此平行。","当你举起手臂时，将肩胛骨挤压在一起。","保持拉伸 15-30 秒，然后松开并重复。"]},{"id":"1363","name":"spine stretch","eq":"body weight","bp":"back","target":"spine","img":"images/1363-JbC2iaV.jpg","gif":"videos/1363-JbC2iaV.gif","zh":["坐在地上，双腿在身前伸展。","将双手放在身后的地面上，手指指向身体。","启动你的核心并慢慢向后倾斜，保持背部挺直。","继续向后倾斜，直到感觉到脊柱被拉伸。","保持伸展几秒钟，然后慢慢回到起始位置。","重复所需的重复次数。"]},{"id":"0688","name":"scapular pull-up","eq":"body weight","bp":"back","target":"traps","img":"images/0688-uTBt1HV.jpg","gif":"videos/0688-uTBt1HV.gif","zh":["首先悬挂在引体向上杆上，手掌背向自己，手臂完全伸展。","通过向下拉和向后拉动肩胛骨来缩回肩胛骨。","启动背部肌肉，将身体拉向杠铃杆，重点是将肩胛骨挤压在一起。","在动作的最高点停顿片刻，然后慢慢降低身体回到起始位置。","重复所需的重复次数。"]},{"id":"0690","name":"seated lower back stretch","eq":"body weight","bp":"back","target":"lats","img":"images/0690-QFmz6ch.jpg","gif":"videos/0690-QFmz6ch.gif","zh":["坐在椅子边缘，双脚平放在地面上。","将双手放在大腿上或椅子两侧以获得支撑。","从臀部开始慢慢向前倾斜，保持背部挺直。","感受下背部的拉伸并保持 20-30 秒。","慢慢回到起始位置并重复所需的重复次数。"]},{"id":"0794","name":"standing lateral stretch","eq":"body weight","bp":"back","target":"lats","img":"images/0794-1jXLYEw.jpg","gif":"videos/0794-1jXLYEw.gif","zh":["双脚分开与肩同宽站立，膝盖稍微弯曲。","将双臂伸直至两侧，与地面平行。","慢慢将上半身向一侧倾斜，感觉侧面和背阔肌有拉伸感。","保持拉伸 15-30 秒。","返回起始位置并在另一侧重复。","重复所需的重复次数。"]},{"id":"3147","name":"pelvic tilt","eq":"body weight","bp":"waist","target":"abs","img":"images/3147-NKJ8o6x.jpg","gif":"videos/3147-NKJ8o6x.gif","zh":["平躺，膝盖弯曲，双脚平放在地上。","将双手放在身体两侧。","收紧腹肌，向上倾斜骨盆，将下背部压入地面。","保持这个姿势几秒钟，专注于收缩腹肌。","释放倾斜并返回到起始位置。","重复所需的重复次数。"]},{"id":"2567","name":"seated piriformis stretch","eq":"body weight","bp":"upper legs","target":"glutes","img":"images/2567-QY39eBr.jpg","gif":"videos/2567-QY39eBr.gif","zh":["坐在地上，双腿在身前伸展。","弯曲右膝，将右脚放在左膝外侧。","将左肘放在右膝外侧，轻轻地将躯干向右扭转。","保持拉伸 20-30 秒，然后换边重复。"]},{"id":"1364","name":"standing pelvic tilt","eq":"body weight","bp":"back","target":"spine","img":"images/1364-cuKYxhu.jpg","gif":"videos/1364-cuKYxhu.gif","zh":["双脚分开与肩同宽站立，膝盖稍微弯曲。","将双手放在臀部或垂在身体两侧。","调动核心肌肉并向前倾斜骨盆，将下背部推向身后的墙壁。","保持该位置几秒钟，然后松开并返回到起始位置。","重复所需的重复次数。"]}];
+const byId = Object.fromEntries(EX.map(e => [e.id, e]));
+
+const RX = {
+  "0794":["站姿侧向拉伸 · 拉腰方肌","每侧 20–30 秒 × 每天 3 次","<b>直接针对你说的那个位置。</b>双脚与肩同宽站立，一只手臂举过头顶，上身向<b>对侧</b>缓慢倾倒，感觉从腋下一路拉到髂骨上缘。别前倾也别后仰，就在正侧面这个平面里。"],
+  "3147":["仰卧骨盆后倾","3 组 × 10 次 · 每天","<b>腰骶康复的第一块砖。</b>平躺屈膝，收紧腹肌把腰压向地面，保持 5 秒。动作幅度很小，看起来几乎没动 —— 但它教会你的腹肌重新接管本该它干的活。"],
+  "1364":["站姿骨盆后倾","每小时 8 次","上一个动作的办公室版，站着靠墙做，别人看不出来。久坐时骨盆一直前倾，这个是把它掰回来的开关。"],
+  "2567":["坐姿梨状肌拉伸","每侧 20–30 秒 × 每天 2–3 次","坐着，一只脚踝架到对侧膝盖上成 4 字，身体前倾。屁股上方深处的酸胀感会被直接拉开。工位上就能做。"],
+  "2208":["泡沫轴胸椎伸展","每天 1–2 次 × 滚 10 下","<b>针对你上背酸最直接的动作。</b>泡沫轴横放在肩胛骨下方，双手抱头，臀部离地，只在胸椎段来回滚；滚到卡顿的位置停下轻轻后仰 3 秒。<b>千万别滚到腰上</b> —— 腰椎活动度本来就过剩，滚它只会更不稳。泡沫轴几十块钱，为这一个动作也值得买。"],
+  "1365":["站姿上背伸展","每小时 15–30 秒","工位旁边就能做。十指交叉、掌心朝外推出去，再举过头顶，同时把肩胛骨往中间夹。打开含胸最快的一招。"],
+  "0690":["坐姿下背拉伸","每 2 小时 20–30 秒","坐在椅子边缘、双脚踩实，从髋部往前倾，背全程保持挺直。上班时最方便的一个，不用离开座位。"],
+  "0628":["怪兽走 · 臀部激活","2 组 × 每侧 15 步","热身用。弹力带套膝盖上方，微蹲侧向走。没有弹力带就做徒手侧向蹲走。"],
+  "1760":["哑铃高脚杯深蹲","3 组 × 10–12 次","双手抱一个哑铃贴胸口。你 185cm 腿长，蹲到大腿平行地面即可，别硬追深度。膝盖跟着脚尖方向走。"],
+  "1459":["哑铃罗马尼亚硬拉","3 组 × 10–12 次","练臀和大腿后侧，直接改善屁股形状。膝盖微屈锁住不动，靠屁股往后送，感觉大腿后侧被拉长就对了。背全程挺直。"],
+  "0431":["哑铃登台阶","3 组 × 每腿 8 次","踏板高 30 厘米左右（按你的身高）。全程靠上面那条腿发力站起，别用下面的腿蹬地借力。"],
+  "3013":["低位臀桥","3 组 × 15 次","顶端夹紧臀部停 2 秒。做完应该是屁股酸而不是腰酸 —— 腰酸说明你在用腰代偿。"],
+  "0276":["死虫","3 组 × 每侧 10 次","腰始终贴紧地面不许拱起。对久坐的人来说这是最安全有效的核心动作，比仰卧起坐好得多。"],
+  "3239":["跪姿平板拍肩","3 组 × 30 秒","从跪姿开始，102 公斤直接做标准平板对腰的压力太大。稳了之后第 3 周换成标准平板。"],
+  "0493":["上斜俯卧撑","3 组 × 8–12 次","手撑在桌子或稳固台面上。<b>撑得越高越轻松</b> —— 从桌面高度开始，能做满 12 次就往下降一级。这是你现在练胸最好的选择。"],
+  "3785":["箱上上斜俯卧撑","3 组 × 8–12 次","上一个动作的替代版本，用箱子或椅子，高度更好调。"],
+  "2398":["跪姿窄距俯卧撑","3 组 × 8–10 次","如果上斜俯卧撑还是太难，先用这个过渡。"],
+  "0293":["哑铃俯身划船","3 组 × 10–12 次","上身前倾约 45 度，背挺直。往肚子方向拉，<b>用背带动而不是用手臂拽</b>，顶端肩胛骨夹紧。这是改善圆肩最有效的动作。"],
+  "2330":["高位下拉（健身房）","3 组 × 10–12 次","拉到锁骨位置，别拉到脖子后面。练宽背，肩宽了腰就显窄。"],
+  "0017":["助力引体向上（健身房）","3 组 × 8–10 次","有助力器就用，配重调到能做满 8 次。没有就用上面的高位下拉替代。"],
+  "0361":["哑铃单臂推举","3 组 × 每侧 10 次","单臂做能顺带练到核心抗侧屈。推的时候肋骨别外翻，肚子收紧。"],
+  "0383":["哑铃反向飞鸟","3 组 × 15 次","重量要轻，感受后肩发力。这个动作专治你对着屏幕塌下去的肩，别因为重量轻就跳过。"],
+  "0489":["山羊挺身 · 背伸展","3 组 × 12 次","起到身体成一条直线就停，<b>不要再往上仰</b>。练下背和臀。"],
+  "2133":["农夫行走","3 组 × 30 米","两手各提一个重哑铃走直线，肩膀往下沉、背挺直。练握力、核心和斜方肌，同时是很好的有氧收尾。"],
+  "0464":["平板支撑转体","3 组 × 每侧 8 次","第 3 周之后再上这个，前两周先练跪姿平板。"],
+  "0798":["动感单车","45 分钟 · 阻力中等","<b>对你最友好的有氧</b> —— 体重全部由座垫承担，膝盖零冲击。保持能说话但不能唱歌的强度。"],
+  "2141":["椭圆机","45 分钟","双脚不离踏板，没有落地冲击。可以边看剧边做，容易坚持满 45 分钟。"],
+  "3636":["靠墙高抬腿","每小时 30 秒","工位旁边就能做。手扶墙，交替把膝盖抬到腰的高度。"],
+  "1403":["颈侧拉伸","每侧 20 秒","看屏幕看久了做。手轻轻把头往一侧带，别用力扳。"],
+  "0716":["侧推颈部拉伸","每侧 20 秒","和上一个交替做。"],
+  "1405":["胸部拉伸","30 秒 × 2 次","站门框里手扶两边身体前倾。<b>直接对抗圆肩</b>，每小时做一次。"],
+  "1511":["腘绳肌拉伸","每侧 30 秒","训练后做。你久坐大腿后侧很紧，这会限制深蹲和硬拉的动作质量。"],
+  "1564":["髂腰肌与股四头肌拉伸","每侧 30 秒","<b>久坐最紧的一块肌肉</b>，也是很多人腰疼的真正原因。每天必做。"]
+};
+
+const BACK = {
+  "1459":[0,"<b>腰酸期间先停</b>。硬拉是全套里对腰负荷最高的动作。改做臀桥，等腰不酸了再从最轻哑铃重新建立动作模式。"],
+  "0489":[0,"<b>腰酸期间停做</b>。它直接给腰椎加伸展负荷。"],
+  "0293":[0,"改成<b>胸部支撑划船</b>（趴在调成 30 度的上斜凳上做）：既把腰的负荷完全卸掉，又是练菱形肌和中下斜方肌最精准的姿势。<b>对你上背那块酸，这是治疗动作，一次都别跳。</b>"],
+  "0383":[1,"<b>优先做。</b>后肩和中下斜方被练强，肩胛骨才回得到位。你上背的酸就是它们变弱的结果 —— 别因为重量轻就跳过。"],
+  "1405":[1,"<b>优先做，每小时一次。</b>把你肩膀往前拽的是胸大肌和胸小肌。拉开它们，上背才不用整天被动拉扯。"],
+  "0794":[1,"<b>最对症的一个，优先做。</b>你说的位置就是腰方肌的走行范围，它久坐会慢性缩短。每天 3 次。"],
+  "3147":[1,"<b>优先做，每天。</b>腹肌重新接管，腰方肌和竖脊肌才卸得下来。"],
+  "1364":[1,"<b>优先做</b>，每小时一次，站着靠墙就行。"],
+  "2567":[1,"<b>优先做。</b>针对屁股上方那片深处的酸，坐着就能做。"],
+  "2208":[1,"<b>优先做，每天。</b>上背酸的根本原因是胸椎失去后伸能力，这是最直接的解法。只滚肩胛段，<b>别滚到腰上</b>。"],
+  "1365":[1,"<b>优先做</b>，每小时一次，坐着站着都行。"],
+  "0690":[1,"<b>优先做</b>，不用离开座位，每两小时一次。"],
+  "1760":[0,"可以做，<b>重量减半</b>，只蹲到不酸的深度。抱着哑铃反而让你上身更直立，比杠铃深蹲对腰友好。"],
+  "0431":[0,"可以做，踏板降到 <b>20 厘米</b>。"],
+  "2133":[0,"可以做，重量减半。它练的是抗压核心，对腰其实是好事。"],
+  "0276":[1,"<b>优先做，每天都做。</b>这是下背痛康复的核心动作，腰全程贴地就不会错。"],
+  "3013":[1,"<b>优先做，每天都做。</b>臀肌被激活起来，腰就不用替它干活了。"],
+  "1564":[1,"<b>优先做，每天 3–4 次，每侧 45 秒。</b>这是最可能让你立刻感到松快的一个。"],
+  "1511":[1,"<b>优先做。</b>腘绳肌紧会拽着骨盆后倾，加重腰的负担。"],
+  "3239":[1,"<b>优先做</b>，但腰一旦塌下去就立刻结束这一组，宁可只做 15 秒。"]
+};
+
+const PLAN = {
+  dayA: ["0628","1760","1459","0431","3013","0276","3239","1511"],
+  dayB: ["0628","0493","0293","2330","0017","0361","0383","0489","2133"],
+  dayC: ["0798","2141","0794","3147","2567","1364","2208","1365","0690","3785","2398","3636","1405","1564","1403","0716"]
+};
+
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function card(id){
+  const e = byId[id]; if(!e) return "";
+  const r = RX[id] || [e.name,"",""];
+  const steps = (e.zh||[]).map(s=>"<li>"+esc(s)+"</li>").join("");
+  return '<button class="ex" type="button" aria-expanded="false">'
+    + '<img src="'+e.img+'" alt="'+esc(r[0])+'" loading="lazy" data-gif="'+e.gif+'" data-img="'+e.img+'">'
+    + '<div class="meta"><div class="zh">'+r[0]+'</div><div class="en">'+e.id+' · '+esc(e.name)+'</div>'
+    + (r[1]?'<div class="rx">'+r[1]+'</div>':'')
+    + (BACK[id]?'<div class="back'+(BACK[id][0]?' good':'')+'">腰 · '+BACK[id][1]+'</div>':'')
+    + '</div>'
+    + '<div class="steps">' + (r[2]?'<div style="color:#1B2A4A;margin-bottom:6px">'+r[2]+'</div>':'')
+    + '<ol>'+steps+'</ol><div class="hint">再点一次收起 · 展开时图片会播放动图</div></div></button>';
+}
+for (const k in PLAN) {
+  const el = document.getElementById(k);
+  if (el) el.innerHTML = PLAN[k].map(card).join("");
+}
+document.querySelectorAll(".ex").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const open = b.classList.toggle("open");
+    b.setAttribute("aria-expanded", open?"true":"false");
+    const im = b.querySelector("img");
+    im.src = open ? im.dataset.gif : im.dataset.img;
+  });
+});
+
+const KIND = {A:"力量 A<br>下肢核心",B:"力量 B<br>上肢背",C:"有氧<br>45 分钟",L:"长有氧<br>70 分钟",R:"休息<br>8000 步"};
+function kindOf(i){
+  const slot = i % 7, order = [null,"C",null,"C",null,"L","R"];
+  if (slot===0||slot===2||slot===4){
+    let n=0; for(let j=0;j<i;j++){const s=j%7; if(s===0||s===2||s===4) n++;}
+    return n%2===0 ? "A" : "B";
+  }
+  return order[slot];
+}
+const LS_D="fl25.days", LS_W="fl25.weights";
+let done = JSON.parse(localStorage.getItem(LS_D)||"[]");
+const cal = document.getElementById("cal");
+for(let i=0;i<25;i++){
+  const k = kindOf(i), b=document.createElement("button");
+  b.type="button"; b.className="day"+(done.includes(i)?" done":""); b.dataset.k=k; b.dataset.i=i;
+  b.setAttribute("aria-pressed", done.includes(i)?"true":"false");
+  b.innerHTML='<div class="d">'+(i+1)+'</div><div class="t">'+KIND[k]+'</div>';
+  b.addEventListener("click",()=>{
+    const idx=+b.dataset.i, at=done.indexOf(idx);
+    if(at>=0) done.splice(at,1); else done.push(idx);
+    b.classList.toggle("done"); b.setAttribute("aria-pressed", at>=0?"false":"true");
+    localStorage.setItem(LS_D,JSON.stringify(done)); refresh();
+  });
+  cal.appendChild(b);
+}
+document.getElementById("resetBtn").addEventListener("click",()=>{
+  done=[]; localStorage.setItem(LS_D,"[]");
+  document.querySelectorAll(".day").forEach(d=>{d.classList.remove("done");d.setAttribute("aria-pressed","false");});
+  refresh();
+});
+function refresh(){
+  document.getElementById("doneN").textContent = done.length;
+  const d = done.length;
+  document.getElementById("estKg").textContent = (8.5*(1-Math.exp(-d/6)) + 0.3377*d).toFixed(1);
+}
+
+const X0=58,X1=870,Y0=14,Y1=266,WT=206,WB=186.5;
+const px=d=>X0+(X1-X0)*d/25, py=w=>Y0+(Y1-Y0)*(WT-w)/(WT-WB);
+const pred=d=>205-(8.5*(1-Math.exp(-d/6))+0.3377*d);
+(function(){
+  let up="",lo="",mid="";
+  for(let d=0;d<=25;d+=0.5){
+    const m=pred(d), spread=d*0.11;
+    mid+=(d?"L":"M")+px(d).toFixed(1)+" "+py(m).toFixed(1);
+    up +=(d?"L":"M")+px(d).toFixed(1)+" "+py(Math.min(205,m+spread)).toFixed(1);
+  }
+  for(let d=25;d>=0;d-=0.5){ lo+="L"+px(d).toFixed(1)+" "+py(pred(d)-d*0.11).toFixed(1); }
+  document.getElementById("curve").setAttribute("d",mid);
+  document.getElementById("band").setAttribute("d",up+lo+"Z");
+})();
+
+let W = JSON.parse(localStorage.getItem(LS_W)||"{}");
+function drawActual(){
+  const ks=Object.keys(W).map(Number).sort((a,b)=>a-b);
+  let p=""; const g=document.getElementById("pts"); g.innerHTML="";
+  ks.forEach((d,i)=>{
+    const x=px(d), y=py(Math.max(WB,Math.min(WT,W[d])));
+    p+=(i?"L":"M")+x.toFixed(1)+" "+y.toFixed(1);
+    const c=document.createElementNS("http://www.w3.org/2000/svg","circle");
+    c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",3.5);c.setAttribute("fill","#C1121F");
+    g.appendChild(c);
+  });
+  document.getElementById("actual").setAttribute("d",p);
+  const el=document.getElementById("avgline");
+  if(ks.length<2){ el.innerHTML='<span style="color:#8894A8">记满 2 天以上会画出你的实际曲线，和绿色的预测线对比。</span>'; return; }
+  const last=ks.slice(-7), avg=last.reduce((s,d)=>s+W[d],0)/last.length;
+  const drop=W[ks[0]]-W[ks[ks.length-1]];
+  const exp=205-pred(ks[ks.length-1]);
+  el.innerHTML='近 '+last.length+' 天平均 <b class="n">'+avg.toFixed(1)+'</b> 斤　·　累计已减 <b class="n" style="color:#2D6A4F">'+drop.toFixed(1)+'</b> 斤　·　'
+    + '同期预测 <span class="n">'+exp.toFixed(1)+'</span> 斤　'
+    + (drop>=exp*0.85 ? '<span style="color:#2D6A4F">进度正常</span>'
+       : '<span style="color:#9C6B10">慢于预期 — 先检查是不是漏记了热量、睡眠没到 7 小时，或者水没喝够</span>');
+}
+document.getElementById("addBtn").addEventListener("click",()=>{
+  const d=parseInt(document.getElementById("dnum").value,10), w=parseFloat(document.getElementById("wnum").value);
+  if(isNaN(d)||d<0||d>25||isNaN(w)||w<120||w>260) return;
+  W[d]=w; localStorage.setItem(LS_W,JSON.stringify(W)); drawActual();
+  document.getElementById("dnum").value=""; document.getElementById("wnum").value="";
+});
+document.getElementById("clrBtn").addEventListener("click",()=>{ W={}; localStorage.setItem(LS_W,"{}"); drawActual(); });
+refresh(); drawActual();
+</script>
+</body>
+</html>
